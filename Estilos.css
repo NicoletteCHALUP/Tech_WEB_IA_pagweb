@@ -1,85 +1,86 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7; /* Color de fondo más claro */
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    color: #333;
-}
+/* estilos.css */
 
 .perfil {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     background-color: #fff;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px 0;
 }
 
-.perfil .contenido {
-    grid-column: 1 / 3; /* Ocupa las dos columnas */
+.imagen {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.perfil .contenido h2 {
+.imagen img {
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Para mantener la relación de aspecto y recortar la imagen si es necesario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.imagen img:hover {
+    transform: scale(1.1);
+}
+
+.contenido {
+    flex: 2;
+    text-align: left;
+}
+
+.contenido h2 {
     color: #333;
     margin-bottom: 10px;
 }
 
-.perfil .contenido p {
+.contenido p {
     color: #666;
     margin-bottom: 10px;
 }
 
-.perfil .contenido ul {
+.contenido ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: left;
 }
 
-.perfil .contenido ul li {
+.contenido ul li {
     margin-bottom: 5px;
 }
 
-.perfil .imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.perfil .imagen img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    border: 5px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.perfil .imagen img:hover {
-    transform: scale(1.1);
-}
-
 .caja-texto {
-    background-color: #f0f0f0; /* Color de fondo más claro */
-    border-radius: 10px; /* Bordes redondeados */
+    flex: 1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
     text-align: justify;
     line-height: 1.6;
+}
+
+@media screen and (max-width: 600px) {
+    .perfil {
+        flex-direction: column;
+    }
+
+    .imagen {
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .imagen img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
 }
