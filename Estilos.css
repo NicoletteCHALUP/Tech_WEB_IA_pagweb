@@ -1,29 +1,46 @@
-/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9e1e1; /* rosado pastel */
+    color: #333; /* negro */
+    background-image: url('C:/Users/Nicolette/TechWeb_IA/i3.png'); /* Imagen de fondo */
+    background-size: cover; /* Ajustar imagen al tamaño de la pantalla */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-attachment: fixed; /* Fijar la imagen de fondo */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 
 .perfil {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    background-color: #fff;
+    justify-content: space-between;
+    background-color: #f2f2f2; /* plomo claro */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .imagen {
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    text-align: center;
 }
 
 .imagen img {
     border-radius: 10px;
     width: 200px;
     height: 200px;
-    object-fit: cover; /* Para mantener la relación de aspecto y recortar la imagen si es necesario */
+    border: 5px solid #f9e1e1; /* rosado pastel */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -34,16 +51,15 @@
 
 .contenido {
     flex: 2;
-    text-align: left;
+    padding-right: 20px;
 }
 
 .contenido h2 {
-    color: #333;
-    margin-bottom: 10px;
+    margin-top: 0;
+    color: #333; /* negro */
 }
 
 .contenido p {
-    color: #666;
     margin-bottom: 10px;
 }
 
@@ -51,7 +67,6 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: left;
 }
 
 .contenido ul li {
@@ -59,8 +74,7 @@
 }
 
 .caja-texto {
-    flex: 1;
-    background-color: #f0f0f0;
+    background-color: #fff; /* blanco */
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
@@ -75,12 +89,68 @@
 
     .imagen {
         margin-bottom: 20px;
-        justify-content: center;
     }
 
-    .imagen img {
-        width: 100%;
-        height: auto;
-        border-radius: 0;
+    .contenido {
+        padding-right: 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9e1e1; /* rosado pastel */
+    color: #333; /* negro */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-gap: 20px; /* Espacio entre elementos */
+}
+
+.item {
+    background-color: #f2f2f2; /* plomo claro */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.item img {
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #f9e1e1; /* rosado pastel */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.item img:hover {
+    transform: scale(1.1);
+}
+
+.item h2 {
+    margin-top: 0;
+    color: #333; /* negro */
+}
+
+.item p {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en pantallas pequeñas */
     }
 }
