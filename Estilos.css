@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.perfil {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.perfil img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.perfil h2 {
+    color: #333;
+}
+
+.perfil p {
+    color: #666;
+}
+
+.perfil ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.perfil ul li {
+    margin-bottom: 5px;
+}
